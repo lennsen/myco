@@ -1,0 +1,12 @@
+<% @spaces.each do |space| %>
+  <div class="card" style="width: 18rem;">
+    <% if space.photo.attached? %>
+      <%= cl_image_tag space.photo.key, crop: :fill %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= space.title %></h5>
+      <p class="card-text"><%= space.description %></p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+<% end %>
