@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :spaces
   has_many :lettings, through: :spaces, source: :bookings
-  has_many :rentals, through: :spaces, source: :bookings
   has_many :bookings
 
   validates :email, presence: true
