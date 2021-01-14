@@ -4,5 +4,19 @@
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
     <a class="btn btn-flat" href="#">Apply now</a>
+    <input type="search" id="address-input" placeholder="Where are we going?" />
   </div>
 </div>
+
+      <div>
+        <h5 class="search-header" style="font-weight: bold">Type in your location ...</h5>
+        <%= form_tag root_path, class: "search-container", method: :get do %>
+           <%= text_field_tag :location,
+               params[:location],
+               placeholder: "", class: "form-control search", autofocus: true
+            %>
+          <div class="input-group-append">
+            <button class="button-search" type="submit"><i class="fas fa-search search"></i></button>
+          </div>
+         <% end %>
+      </div>
