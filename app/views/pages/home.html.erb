@@ -10,7 +10,7 @@
 
       <div>
         <h5 class="search-header" style="font-weight: bold">Type in your location ...</h5>
-        <%= form_tag root_path, class: "search-container", method: :get do %>
+        <%= form_tag spaces_path, class: "search-container", method: :get do %>
            <%= text_field_tag :location,
                params[:location],
                placeholder: "", class: "form-control search", autofocus: true
