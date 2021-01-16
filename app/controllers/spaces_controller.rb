@@ -8,4 +8,19 @@ class SpacesController < ApplicationController
       @spaces = policy_scope(Space).all
     end
   end
+
+  def show 
+    @space = Space.find(params[:id])
+    # @booking = Booking.new
+    authorize @space
+    # @markers = [
+    #   {
+      #     lng: @space.longitude
+      #     lat: @space.latitude,
+    #   }
+    # ]
+  end
+
+  
+
 end
