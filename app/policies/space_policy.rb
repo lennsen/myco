@@ -8,4 +8,8 @@ class SpacePolicy < ApplicationPolicy
     true
   end
 
+  def new?
+    true
+  end
+
 end

@@ -21,6 +21,23 @@ class SpacesController < ApplicationController
     # ]
   end
 
+  def new
+    @space = Space.new
+    authorize @space
+  end
+
+  def create
+    @space = Space.new(set_params)
+    @space.user = current_user
+    @space.save
+    if @space.save
+      redirect_to van_path(@space)
+    else
+      render :new
+    end
+    authorize @space
+  end
+
   
 
 end
