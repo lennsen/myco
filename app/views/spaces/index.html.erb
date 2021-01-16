@@ -1,13 +1,17 @@
-<% @spaces.each do |space| %>
-  <div class="card" style="width: 18rem;">
-    <% if space.photo.attached? %>
-      <%= cl_image_tag space.photo.key, crop: :fill %>
-    <% end %>
-    <div class="card-body">
-      <h5 class="card-title"><%= space.title %></h5>
-      <p class="card-text"><%= space.description %></p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+<div class="index-container mt-5">
+  <% @spaces.each do |space| %>
+    <div class="card" style="width: 18rem;">
+      <% if space.photo.attached? %>
+        <%= cl_image_tag space.photo.key, crop: :fill %>
+      <% end %>
+      <div class="card-body">
+        <h5 class="card-title"><%= space.title %></h5>
+        <p class="card-text"><%= space.description %></p>
+        <%= link_to "Continue", space_path(space.id), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %> 
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
 

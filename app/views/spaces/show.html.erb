@@ -1,0 +1,17 @@
+<div class="container mt-5">
+
+
+    <div class="profile-image">
+        <%= cl_image_tag @space.photo.key, :width=>500, :height=>400, crop: :fill, style:"border-radius: 20px" %>
+    </div>
+
+
+  <div style="margin-bottom: 50px">
+    <h1><%= @space.title %></h1>
+    <h5><%= @space.description %></h5>
+    <h5><%= @space.space_type %></h5>
+    <h5><%= @space.price_per_month %></h5>
+    <h5><%= @space.location %></h5>
+  </div>
+
+</div>
