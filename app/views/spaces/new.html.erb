@@ -7,7 +7,7 @@
       <%= simple_form_for(@space) do |f| %>
         <%= f.input :title %>
         <%= f.input :description %>
-        <%= f.input :space_type %>
+        <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
         <%= f.input :price_per_month %>
         <%= f.input :location %>
         <%= f.input :photo, as: :file %>
