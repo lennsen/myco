@@ -1,0 +1,20 @@
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h3>Change the details of your Space</h3>
+      <br>
+      <br>
+      <%= simple_form_for(@space) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
+        <%= f.input :price_per_month %>
+        <%= f.input :location %>
+        <%= f.input :photo, as: :file %>
+        <br>
+        <%= f.submit 'Save Changes', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
+        <%= link_to 'Back', space_path(@space), class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
+      <% end %>
+    </div>
+  </div>
+</div>

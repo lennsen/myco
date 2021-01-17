@@ -38,6 +38,22 @@ class SpacesController < ApplicationController
     authorize @space
   end
 
+  def update
+    @space = Space.find(params[:id])
+    @space.update(set_params)
+    if @space.save
+      redirect_to space_path(@space)
+    else
+      render :edit
+    end
+    authorize @space
+  end
+
+  def edit
+    @space = Space.find(params[:id])
+    authorize @space
+  end
+
   private
 
   def set_params
