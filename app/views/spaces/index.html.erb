@@ -1,5 +1,4 @@
 
-
 <div class="index-container mt-5">
   <% @spaces.each do |space| %>
     <div class="card" style="width: 18rem;">
@@ -9,9 +8,8 @@
       <div class="card-body">
         <h5 class="card-title"><%= space.title %></h5>
         <p class="card-text"><%= space.description %></p>
-        <%= link_to "Continue", space_path(space.id), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %> 
+        <%= link_to "Continue", space_path(space.id, :location => params[:location]), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %>
+      </div>
     </div>
-  <% end %>
+    <% end %>
 </div>
-
-

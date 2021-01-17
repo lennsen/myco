@@ -14,4 +14,11 @@
     <h5><%= @space.location %></h5>
   </div>
 
+  <%= link_to 'Back', spaces_path(:location => params[:location]), class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
+  <div>
+    <% if policy(@space).edit? %>
+      <%= link_to "change your offer", edit_space_path(@space), class: "btn btn-outline-dark", style: "margin-right: 10px; border-radius: 50px" %>
+    <% end %>
+  </div>
+
 </div>

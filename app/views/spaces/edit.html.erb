@@ -1,7 +1,7 @@
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h3>Offer your Office to Fellow Co-Workers</h3>
+      <h3>Change the details of your Space</h3>
       <br>
       <br>
       <%= simple_form_for(@space) do |f| %>
@@ -12,8 +12,8 @@
         <%= f.input :location %>
         <%= f.input :photo, as: :file %>
         <br>
-        <%= f.submit 'Create HUB', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
-        <%= link_to 'Back Home', root_path, class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
+        <%= f.submit 'Save Changes', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
+        <%= link_to 'Back', space_path(@space), class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
       <% end %>
     </div>
   </div>
