@@ -23,6 +23,20 @@
     <% if policy(@space).destroy? %>
       <%= link_to "delete HUB", space_path(@space), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-outline-danger", style: "margin-right: 10px; border-radius: 50px" %>    
     <% end %>
+
+
   </div>
+
+    <div class="col-6">
+        <div class="container mt-5 border p-3 rounded">
+          <%= simple_form_for [@space, @booking] do |f| %>
+          <%=   f.input :start_date  %>
+          <%=   f.input :end_date %>
+          <p> <%= @space.price_per_month%> € per month</p>
+          <%=   f.submit 'Book Now', class: "btn btn-warning", style: "border-radius: 50px" %>
+          <% end %>
+        </div>
+    </div>
+  
 
 </div>
