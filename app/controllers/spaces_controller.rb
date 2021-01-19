@@ -11,7 +11,7 @@ class SpacesController < ApplicationController
 
   def show
     @space = Space.find(params[:id])
-    # @booking = Booking.new
+    @booking = Booking.new
     authorize @space
     # @markers = [
     #   {
