@@ -8,7 +8,8 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 80px;
+  margin-top: 10px;
 }
 
 .navbar-lewagon-transparent {
@@ -21,7 +22,8 @@
 }
 
 .navbar-lewagon-transparent .navbar-brand img {
-  width: 40px;
+  width: 80px;
+  margin-top: 10px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -30,4 +32,38 @@
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
     color: rgb(103, 204, 129);
+}
+
+.btn-ghost-home {
+  color: $white;
+  border: 1px solid $white;
+  padding: 8px 24px;
+  margin-right: 20px;
+  border-radius: 50px;
+  font-weight: normal;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost-home:hover {
+  opacity: 1;
+  color: $darkgrey;
+  background-color: $white
+}
+
+.btn-ghost {
+  color: $darkgrey;
+  border: 1px solid $darkgrey;
+  padding: 8px 24px;
+  margin-right: 20px;
+  border-radius: 50px;
+  font-weight: normal;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: $white;
+  background-color: $darkgrey
 }
