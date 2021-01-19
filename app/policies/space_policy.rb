@@ -16,10 +16,10 @@ class SpacePolicy < ApplicationPolicy
     true
   end
 
-  # def destroy?
-  #   record.user == user
-  # end
-  #
+  def destroy?
+    record.user == user
+  end
+  
   
   def update?
     record.user == user

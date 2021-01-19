@@ -54,6 +54,16 @@ class SpacesController < ApplicationController
     authorize @space
   end
 
+
+  def destroy
+    @space = Space.find(params[:id])
+    @space.user = current_user
+    authorize @space
+    @space.delete
+    redirect_to root_path
+  end
+
+
   private
 
   def set_params
