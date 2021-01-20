@@ -1,0 +1,39 @@
+<%= render 'shared/navbar' %>
+<br><br>
+<div class="container mt-5 mb-5">
+  <div class="container">
+    <h4>My Hostings</h4>
+    <p>Keep track of your spaces and accept or decline a booking.</p>
+  </div>
+  <div class="container">
+    <div class="row justify-content-between">
+      <% if @hostings.empty?%>
+        <div class="container mt-5 notification">
+          <p>Nothing to display here. You are currently not offering a space for rent or nobody has booked it.</p>
+          <a class="btn btn-ghost" href="/spaces/new">Become a HUB</a>
+        </div>
+      <% else %>
+       <% @hostings.each do |hosting| %>
+          <div class="card  mb-4" style="width: 18rem; border-radius: 7px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)">
+              <%= cl_image_tag hosting.space.photo.key, crop: :fill, class: "card-img-top" %>
+            <div class="card-body">
+              <% if hosting.status == "Accepted"%>
+                <p class="card-text status-green" style="border-radius: 50px">Accepted</p>
+              <% elsif hosting.status == "Declined"%>
+                <p class="card-text status-red" style="border-radius: 50px">Declined</p>
+              <% else %>
+                <p class="card-text status-red" style="border-radius: 50px">Pending</p>
+              <% end %>
+                <h5><%= link_to hosting.space.title, space_path(hosting.space) %></h5>
+                <p class="card-text"><%= hosting.user.first_name %> <%= hosting.user.last_name %></p>
+                <p class="card-text"><%= hosting.user.email %></p>
+                <p class="card-text"><%= hosting.start_date %> – <%= hosting.end_date %></p>
+                <%= link_to "Accept", confirm_path(status: "Accepted", booking_id: hosting.id), method: :patch, class: "btn btn-secondary", style: "color: white; border-radius: 50px"%>
+                <%= link_to "Decline", confirm_path(status: "Declined", booking_id: hosting.id), method: :patch, class: "btn btn-secondary", style: "color: white; border-radius: 50px"%>
+            </div>
+          </div>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+</div>

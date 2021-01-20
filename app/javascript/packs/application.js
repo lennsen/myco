@@ -7,6 +7,9 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+// External imports
+import "bootstrap";
+
 import { initAutocomplete } from '../plugins/init_autocomplete';
 document.addEventListener('turbolinks:load', () => {
 initAutocomplete();
