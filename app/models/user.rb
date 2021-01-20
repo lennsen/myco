@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :spaces
-  has_many :lettings, through: :spaces, source: :bookings
+  has_many :hostings, through: :spaces, source: :bookings
   has_many :bookings
 
   validates :email, presence: true

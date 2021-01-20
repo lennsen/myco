@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :spaces do
     resources :bookings, only: %i[create]
   end
-
-  # resources :bookings, only: [:index, :show, :edit, :update, :destroy]
-
-
+    resources :bookings, only: [:index, :show, :edit, :update, :destroy] do
+      collection do
+        get :hostings
+      end
 end

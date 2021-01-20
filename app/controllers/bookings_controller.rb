@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     authorize @booking
   end
-  
+
   def create
     @booking = Booking.new(set_params)
     @space = Space.find(params[:space_id])
@@ -16,6 +16,12 @@ class BookingsController < ApplicationController
       render :new
     end
     authorize @booking
+  end
+
+  def hostings
+    @user = current_user
+    @hostings = @user.hostings
+    authorize @offers
   end
 
   private
