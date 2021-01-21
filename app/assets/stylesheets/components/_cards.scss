@@ -1,3 +1,60 @@
 .card img {
   max-height: 12rem;
 }
+
+.embed-responsive .card-img-top {
+    object-fit: cover;
+}
+
+.status-green {
+  display: table;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: $green;
+  background-color: $light-gray;
+}
+
+.status-red {
+  display: table;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: $red;
+  background-color: $light-gray;
+}
+
+.hostings-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: inherit;
+  background-clip: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+}
+
+.hostings-card-body {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.hostings-card-left {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.hostings-card-info {
+  margin-left: 20px;
+}
+
+.hostings-card-title {
+  display: flex;
+}

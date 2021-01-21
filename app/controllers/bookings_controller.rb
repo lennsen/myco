@@ -20,6 +20,7 @@ class BookingsController < ApplicationController
     @space = Space.find(params[:space_id])
     @booking.space = @space
     @booking.user = current_user
+    @booking.status = "Pending"
     if @booking.save
       redirect_to root_path
     else
@@ -49,6 +50,18 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.delete
     redirect_to bookings_path
+  end
+
+  def confirm
+    @booking = Booking.find(params[:booking_id])
+    if params[:status] == "Accepted"
+      @booking.status = "Accepted"
+    elsif params[:status] == "Declined"
+        @booking.status = "Declined"
+    end
+    @booking.save
+    redirect_to hostings_bookings_path
+    authorize @booking
   end
 
   def hostings
