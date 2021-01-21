@@ -11,4 +11,5 @@ Rails.application.routes.draw do
         get :hostings
       end
     end
+    patch '/confirm', to: "bookings#confirm"
 end

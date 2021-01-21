@@ -1,18 +1,18 @@
 <%= render 'shared/navbar' %>
 <br><br>
 <div class="container mt-5 mb-5">
-  <%= link_to "Back", root_path, class: 'create btn btn-outline-dark', style: "border-radius: 50px" %>
   <div class="container mt-5">
-    <h4>My booked spaces</h4>
+    <h4>My bookings</h4>
     <p>Check out your upcoming bookings.</p>
   </div>
     <div class="container">
     <div class="row justify-content-between">
-      <% if @bookings.nil?%>
+      <% if @bookings.empty?%>
         <div class="container mt-5">
-          <p><i>Nothing to display here. You currently dont have any bookings.</i></p>
+          <p>Nothing to display here. You currently don't have any bookings.</p>
         </div>
       <% else %>
+
         <% @bookings.each do |booking| %>
           <div class="card mb-4" style="width: 18rem; border-radius: 7px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2)">
             <% if booking.space.photo.attached? %>
