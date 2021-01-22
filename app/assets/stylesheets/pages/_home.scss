@@ -1,4 +1,5 @@
 .container-box {
+  position: absolute;
   background-color: rgba(120, 120, 120, 0.7);
   width: fit-content;
   padding: 20px 40px;
@@ -18,3 +19,10 @@
   flex-basis: 100%;
   flex: 1;
 }
+
+.home-container {
+  position: relative;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
