@@ -4,7 +4,7 @@
 # components.
 # See https://github.com/heartcombo/simple_form#custom-components to know
 # more about custom components.
-# Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
+Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
 #
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
@@ -173,4 +173,32 @@ SimpleForm.setup do |config|
   # Defines validation classes to the input_field. By default it's nil.
   # config.input_field_valid_class = 'is-valid'
   # config.input_field_error_class = 'is-invalid'
+
+  config.wrappers :with_numbers, tag: 'div', class: 'row', error_class: 'error' do |b|
+    b.use :html5
+    b.use :number, wrap_with: { tag: 'div', class: 'span1 number'}
+    b.wrapper tag: 'div', class: 'span8' do |ba|
+      ba.use :placeholder
+      ba.use :label
+      ba.use :input
+      ba.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+    end
+  end
+
+  1.upto(12) do |col|
+    config.wrappers "field#{col}".to_sym, tag: 'div', class: 'form-group', error_class: 'has-error' do |mdf|
+      mdf.use :html5
+      mdf.use :placeholder
+      mdf.use :label, class: 'sr-only'
+  
+      mdf.wrapper tag: 'div', class: "col-sm-#{col}" do |wr|
+        wr.use :input, class: 'form-control'
+        wr.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+        wr.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+      end
+    end
+  end
+
+
 end

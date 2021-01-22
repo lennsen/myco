@@ -5,17 +5,17 @@
       <h3>Offer your Office to Fellow Co-Workers</h3>
       <br>
       <br>
-      <%= simple_form_for(@space) do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
-        <%= f.input :price_per_month %>
-        <%= f.input :location %>
-        <%= f.input :photo, as: :file %>
-        <br>
-        <%= f.submit 'Create HUB', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
-        <%= link_to 'Back Home', root_path, class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
-      <% end %>
+        <%= simple_form_for @space, remote: true do |f| %>
+          <%= f.input :title, wrapper: :field4  %>
+          <%= f.input :description, wrapper: :field8 %>
+          <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
+          <%= f.input :price_per_month, wrapper: :field4 %>
+          <%= f.input :location, wrapper: :field4 %>
+          <%= f.input :photo, as: :file %>
+          <br>
+          <%= f.submit 'Create HUB', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
+          <%= link_to 'Back Home', root_path, class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
+        <% end %>
     </div>
   </div>
 </div>
