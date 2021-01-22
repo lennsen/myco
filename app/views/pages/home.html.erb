@@ -24,10 +24,16 @@
           <div class="input-group-append">
             <button class="btn btn-flat" type="submit">Submit</button>
           </div>
-          <% end %>
+        </div>
       </div>
       <div class="column">
-        <p>TEST</p>
+        <div class="checkboxes-home">
+          <p><%= check_box_tag :space_type, 'Private spaces' %> Private spaces</p>
+          <p><%= check_box_tag :space_type, 'Community spaces' %> Community spaces</p>
+          <p><%= check_box_tag :space_type, 'Corporate spaces' %> Corporate spaces</p>
+          <p><%= check_box_tag :space_type, 'Professional space' %> Professional spaces</p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -58,7 +64,3 @@
       </div>
     </div>
   </div>
-
-
-
-
