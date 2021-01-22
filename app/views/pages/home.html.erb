@@ -1,26 +1,64 @@
 <%= render "shared/navbar-home" %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80');">
+
   <div class="container container-box">
-    <h1>Find unique micro coworking places in your street.</h1>
-      <div>
-        <div>
-          <%= form_tag spaces_path, class: "search-container", method: :get do %>
-            <%= text_field_tag :location,
-                params[:location],
-                placeholder: "Where do you want to work?", class: "form-control search", autofocus: true
-              %>
+    <div class="row">
+      <div class="column">
+        <div style="margin-bottom: 20px">
+          <h1>Find unique micro coworking places in your street.</h1>
         </div>
         <div>
+          <div style="margin-bottom: 20px">
+            <%= form_tag spaces_path, class: "search-container", method: :get do %>
             <%= text_field_tag :location,
-                params[:location],
-                placeholder: "When do you want to work?", class: "form-control search", autofocus: true
-              %>
-        </div>
-        <div class="input-group-append">
-          <button class="btn btn-flat" type="submit">Submit</button>
-        </div>
-         <% end %>
+            params[:location],
+            placeholder: "Where do you want to work?", class: "form-control search", autofocus: true
+            %>
+          </div>
+          <div style="margin-bottom: 20px">
+            <%= text_field_tag :location,
+            params[:location],
+            placeholder: "When do you want to work?", class: "form-control search", autofocus: true
+            %>
+          </div>
+          <div class="input-group-append">
+            <button class="btn btn-flat" type="submit">Submit</button>
+          </div>
+          <% end %>
       </div>
+      <div class="column">
+        <p>TEST</p>
+      </div>
+    </div>
   </div>
 </div>
+
+
+  <div class="home-container">
+    <div>
+      <h2>Explore myCO</h2>
+      <h3>myCO offers plenty of differnt home office and coworking variations - go and check them out. </h3>
+    </div>
+
+    <div class="cards">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        Private spaces
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+        Community spaces
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+        Corporate spaces
+      </div>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+        Professional spaces
+      </div>
+    </div>
+  </div>
+
+
+
 
