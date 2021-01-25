@@ -20,12 +20,32 @@
   flex: 1;
 }
 
-.home-container {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.home-container-1 {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .checkboxes-home {
   margin-top: 125px;
   margin-left: 35px;
 }
+
+.ap-dropdown-menu {
+    width: max-content;
+  }
+
+  .home-container-2 {
+    color: white;
+    background: black;
+    margin: 5rem 0 0;
+    padding: 5rem;
+  }
+
+  .home-container-3 {
+    padding: 5rem 0 0 5rem;
+  }
+
+  .private-spaces {
+    display: flex;
+    justify-content: flex-start;
+  }
