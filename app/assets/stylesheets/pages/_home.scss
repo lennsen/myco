@@ -1,9 +1,9 @@
 .container-box {
-  position: absolute;
   background-color: rgba(120, 120, 120, 0.7);
   width: fit-content;
   padding: 20px 40px;
   margin-left: 5rem;
+  margin-right: 40rem;
 }
 
 .row {
@@ -21,8 +21,11 @@
 }
 
 .home-container {
-  position: relative;
   margin-left: 5rem;
   margin-right: 5rem;
 }
 
+.checkboxes-home {
+  margin-top: 125px;
+  margin-left: 35px;
+}
