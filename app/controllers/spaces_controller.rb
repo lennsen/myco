@@ -7,18 +7,20 @@ class SpacesController < ApplicationController
     else
       @spaces = policy_scope(Space).all
     end
+
+    @markers = @spaces.geocoded.map do |space|
+        {
+          lat: space.latitude,
+          lng: space.longitude,
+          infoWindow: render_to_string(partial: "info_window", locals: { space: space })
+        }
+      end
   end
 
   def show
     @space = Space.find(params[:id])
     @booking = Booking.new
     authorize @space
-    # @markers = [
-    #   {
-      #     lng: @space.longitude
-      #     lat: @space.latitude,
-    #   }
-    # ]
   end
 
   def new

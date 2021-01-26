@@ -15,9 +15,15 @@
             %>
           </div>
           <div style="margin-bottom: 20px">
-            <%= text_field_tag :location,
-            params[:location],
-            placeholder: "When do you want to work?", class: "form-control search", autofocus: true
+            <%= text_field_tag :start_date,
+            params[:start_date],
+            placeholder: "When do you want to start?", class: "form-control search", autofocus: true
+            %>
+          </div>
+          <div style="margin-bottom: 20px">
+            <%= text_field_tag :end_date,
+            params[:end_date],
+            placeholder: "When do you want to finish?", class: "form-control search", autofocus: true
             %>
           </div>
           <div class="input-group-append">
