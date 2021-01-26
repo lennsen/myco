@@ -1,6 +1,5 @@
 <%= render "shared/navbar-home" %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1564069114553-7215e1ff1890?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80');">
-
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./assets/banner.png');">
   <div class="container container-box">
     <div class="row">
       <div class="column">
@@ -40,10 +39,10 @@
 </div>
 
 
-  <div class="home-container">
+  <div class="home-container-1">
     <div>
-      <h2>Explore myCO</h2>
-      <h3>myCO offers plenty of differnt home office and coworking variations - go and check them out. </h3>
+      <h3>Explore myCO</h3>
+      <p>myCO offers plenty of differnt home office and coworking variations - go and check them out. </p>
     </div>
 
     <div class="cards">
@@ -64,3 +63,95 @@
       </div>
     </div>
   </div>
+
+<div class="home-container-2">
+  <div>
+    <h3>How does myCO work and what’s in for you?</h3>
+    <p>myCO is designed to leverage existing spaces and create new communities in the local neighborhoods. For example, a private individual who has more space than he or she actually needs for his or her own home office can offer a home office space to a neighbor who has a need but little private space. In addition, operators of commercial coworking spaces, can achieve better occupancy of the workspaces they offer, by providing home office space to individuals who live nearby. In addition, companies that have a larger office building capacity than they actually need can rent out the excess workspace to private individuals through myCO. We're building on local synergies between individuals and individuals and businesses. Space is plentiful - it's just a question of how we use it.</p>
+  </div>
+  <%= image_tag('Big_Card.png') %>
+</div>
+
+<div class="home-container-3">
+  <div>
+    <h3>Private coworking spaces</h3>
+    <p>Use the available private space we have. Learn more about your neighborhood and foster community as well.</p>
+  </div>
+  <div class="private-spaces">
+    <% @private_spaces.limit(5).each do |space| %>
+      <div class="card" style="width: 18rem;">
+        <% if space.photo.attached? %>
+          <%= cl_image_tag space.photo.key, crop: :fill %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= space.title %></h5>
+          <p class="card-text"><%= space.location %></p>
+          <%= link_to "Continue", space_path(space.id, :location => params[:location]), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="home-container-3">
+  <div>
+    <h3>Community coworking spaces</h3>
+    <p>Be part of an ecosystem of all types of workers in a porfessional coworking space as part of your home office. Find one next to your home.</p>
+  </div>
+  <div class="private-spaces">
+    <% @community_spaces.limit(5).each do |space| %>
+      <div class="card" style="width: 18rem;">
+        <% if space.photo.attached? %>
+          <%= cl_image_tag space.photo.key, crop: :fill %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= space.title %></h5>
+          <p class="card-text"><%= space.location %></p>
+          <%= link_to "Continue", space_path(space.id, :location => params[:location]), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="home-container-3">
+  <div>
+    <h3>Corporate coworking spaces</h3>
+    <p>Make more efficient use of your existing offices and make excess workstations available to home office professionals from your neighbourhood.</p>
+  </div>
+  <div class="private-spaces">
+    <% @corporate_spaces.limit(5).each do |space| %>
+      <div class="card" style="width: 18rem;">
+        <% if space.photo.attached? %>
+          <%= cl_image_tag space.photo.key, crop: :fill %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= space.title %></h5>
+          <p class="card-text"><%= space.location %></p>
+          <%= link_to "Continue", space_path(space.id, :location => params[:location]), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="home-container-3">
+  <div>
+    <h3>Professional coworking spaces</h3>
+    <p>Be part of an ecosystem of all types of workers in a porfessional coworking space as part of your home office. Find one next to your home.</p>
+  </div>
+  <div class="private-spaces">
+    <% @professional_spaces.limit(5).each do |space| %>
+      <div class="card" style="width: 18rem;">
+        <% if space.photo.attached? %>
+          <%= cl_image_tag space.photo.key, crop: :fill %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= space.title %></h5>
+          <p class="card-text"><%= space.location %></p>
+          <%= link_to "Continue", space_path(space.id, :location => params[:location]), class: "create btn btn-warning", style: "margin-top: 8px; border-radius: 50px"  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
