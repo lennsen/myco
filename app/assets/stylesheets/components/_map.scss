@@ -7,6 +7,12 @@
   top: 0;
 }
 
+.info-window a {
+  outline: 0;
+  text-decoration: none;
+  color: #52AFA9;
+}
+
 // media sizing
 @media(max-width: 1200px)  {
     #map {

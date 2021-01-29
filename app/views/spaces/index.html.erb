@@ -4,7 +4,7 @@
   <div class="index-container ">
     <% @spaces.each do |space| %>
       <%= link_to space_path(space.id, :location => params[:location]) do %>
-        <div class="card">
+        <div class="card card-grid">
           <% if space.photo.attached? %>
             <%= cl_image_tag space.photo.key, crop: :fill %>
           <% end %>
