@@ -35,7 +35,7 @@ file = URI.open('https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?ix
 s1 = Space.create(
   title: "Office with a view",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Corporate Space",
+  space_type: "CORPORATE",
   location: "Hagelberger Str. 11 10965 Berlin",
   latitude: 52.4918226,
   longitude: 13.3842672,
@@ -50,7 +50,7 @@ file = URI.open('https://images.unsplash.com/photo-1585634917202-6f03b28fc6d0?ix
 s2 = Space.create(
   title: "Cozy and quite work space",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Professional Space",
+  space_type: "PROFESSIONAL",
   location: "Kreuzbergstraße 17a, 10965 Berlin",
   latitude: 52.4892546,
   longitude: 13.374921,
@@ -65,7 +65,7 @@ file = URI.open('https://images.unsplash.com/photo-1492724441997-5dc865305da7?ix
 s3 = Space.create(
   title: "Sharing is Caring",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Private Space",
+  space_type: "PRIVATE",
   location: "Nostitzstraße 15, 10961 Berlin",
   latitude: 52.4914043,
   longitude: 13.3904046,
@@ -80,7 +80,7 @@ file = URI.open('https://images.unsplash.com/photo-1595846519845-68e298c2edd8?ix
 s4 = Space.create(
   title: "Home Office away from Home",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Private Space",
+  space_type: "PRIVATE",
   location: "Bergmannstraße 141, 10961 Berlin",
   latitude: 52.4890419,
   longitude: 13.3942448,
@@ -95,7 +95,7 @@ file = URI.open('https://images.unsplash.com/photo-1599652645257-ff34421cd171?ix
 s5 = Space.create(
   title: "Urban Jungle Office",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Private Space",
+  space_type: "PRIVATE",
   location: "Nostitzstraße 15, 10961 Berlin",
   latitude: 52.4914043,
   longitude: 13.3904046,
@@ -110,7 +110,7 @@ file = URI.open('https://images.unsplash.com/photo-1597611717581-f295e2b1944f?ix
 s6 = Space.create(
   title: "Co-Working in a private space",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Private Space",
+  space_type: "PRIVATE",
   location: "Grunowstraße 11-21, 13187 Berlin",
   latitude: 52.5677108,
   longitude: 13.409336,
@@ -125,7 +125,7 @@ file = URI.open('https://images.unsplash.com/photo-1449247613801-ab06418e2861?ix
 s7 = Space.create(
   title: "Quiet and Green",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Professional Space",
+  space_type: "PROFESSIONAL",
   location: "Lotosweg 30-34, 13467 Berlin",
   latitude: 52.6142558,
   longitude: 13.3234351,
@@ -140,7 +140,7 @@ file = URI.open('https://images.unsplash.com/photo-1498409785966-ab341407de6e?ix
 s8 = Space.create(
   title: "Work place in a modern loft",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Corporate Space",
+  space_type: "CORPORATE",
   location: "Fehrbelliner Straße 45, 10119 Berlin, Germany",
   latitude: 52.5346701,
   longitude: 13.3999596,
@@ -155,7 +155,7 @@ file = URI.open('https://images.unsplash.com/photo-1455994972514-4624f7f224a7?ix
 s9 = Space.create(
   title: "Happy working in a happy place",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Community Space",
+  space_type: "COMMUNITY",
   location: "Kastanienallee 55, 10119 Berlin",
   latitude: 52.5333039,
   longitude: 13.4047241,
@@ -170,7 +170,7 @@ file = URI.open('https://images.unsplash.com/photo-1594732832278-abd644401426?ix
 s10 = Space.create(
   title: "Spacious, green and bright",
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  space_type: "Community Space",
+  space_type: "COMMUNITY",
   location: "Bornholmer Straße 33, 10439 Berlin, Germany",
   latitude: 52.55415725708008,
   longitude: 13.405263900756836,
