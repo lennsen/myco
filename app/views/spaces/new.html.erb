@@ -8,7 +8,7 @@
         <%= simple_form_for @space, remote: true do |f| %>
           <%= f.input :title, wrapper: :field4  %>
           <%= f.input :description, wrapper: :field8 %>
-          <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
+          <%= f.input :space_type, as: :radio_buttons, collection: ['PRIVATE', 'COMMUNITY', 'CORPORATE', 'PROFESSIONAL'] %>
           <%= f.input :price_per_month, wrapper: :field4 %>
           <%= f.input :location, wrapper: :field4 %>
           <%= f.input :photo, as: :file %>

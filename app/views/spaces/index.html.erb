@@ -9,9 +9,9 @@
             <%= cl_image_tag space.photo.key, crop: :fill %>
           <% end %>
           <div class="card-body">
+            <p class="card-spacetype"><%= space.space_type %></p>
             <h5 class="card-title"><%= space.title %></h5>
-            <p class="card-text"><%= space.location %></p>
-            <p class="card-text"><%= space.space_type %></p>
+            <p class="card-location"><%= space.location %></p>
             <p class="card-text"><%= space.price_per_month %> EUR/month</p>
           </div>
         </div>
