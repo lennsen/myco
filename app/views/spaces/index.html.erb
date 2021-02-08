@@ -11,8 +11,10 @@
           <div class="card-body">
             <p class="card-spacetype"><%= space.space_type %></p>
             <h5 class="card-title"><%= space.title %></h5>
-            <p class="card-location"><%= space.location %></p>
-            <p class="card-text"><%= space.price_per_month %> EUR/month</p>
+            <div class="card-details">
+              <p class="card-location"><%= space.location %></p>
+              <p class="card-price"><%= space.price_per_month %> EUR/month</p>
+            </div>
           </div>
         </div>
       <% end %>

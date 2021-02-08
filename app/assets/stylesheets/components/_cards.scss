@@ -16,10 +16,20 @@
 .card-spacetype {
   margin-bottom: 8px;
   font-size: 0.8rem;
+  color: $lightgrey;
+  font-weight: 500;
 }
 
 .card-location {
   font-size: 0.8rem;
+}
+
+.card-price {
+  color: #55B8BF;
+}
+
+.card-details {
+
 }
 
 .embed-responsive .card-img-top {
