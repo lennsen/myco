@@ -1,0 +1,70 @@
+.space-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  display: block;
+}
+
+.booking-form {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 20px;
+  width: 28rem;
+}
+
+.input-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+}
+
+.input-message {
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  .form-control {
+    height: 4em;
+    margin-bottom: 20px;
+  }
+}
+
+.input-start-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-end-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+#booking_start_date_1i {
+  width: auto;
+  font-size: 0.8rem;
+}
+#booking_start_date_2i {
+  width: auto;
+  font-size: 0.8rem;
+}
+#booking_start_date_3i {
+  width: auto;
+  font-size: 0.8rem;
+}
+
+#booking_end_date_1i {
+  width: auto;
+  font-size: 0.8rem;
+}
+#booking_end_date_2i {
+  width: auto;
+  font-size: 0.8rem;
+}
+#booking_end_date_3i {
+  width: auto;
+  font-size: 0.8rem;
+}
