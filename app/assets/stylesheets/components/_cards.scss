@@ -5,27 +5,36 @@
 
 .card img {
   max-height: 12rem;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .card {
-  border-radius: 8px;
+  border-radius: 4px;
+  border: 0px solid rgba(38, 38, 38, 0.125);
+}
+
+.card-title {
+  height: 2em;
 }
 
 .card-spacetype {
   margin-bottom: 8px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: $lightgrey;
   font-weight: 500;
 }
 
 .card-location {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  color: #ADADAD;
 }
 
 .card-price {
   color: #55B8BF;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .card-details {
