@@ -3,8 +3,12 @@
   justify-content: space-between;
 }
 
-.label {
-  display: block;
+.form-inline {
+
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .booking-form {
@@ -27,10 +31,11 @@
 .input-message {
   font-size: 0.8rem;
   font-weight: 500;
+  margin-top: 1em;
 
   .form-control {
-    height: 4em;
-    margin-bottom: 20px;
+    height: 5em;
+    margin-bottom: 13px;
   }
 }
 
@@ -42,6 +47,7 @@
 .input-end-date {
   display: flex;
   justify-content: space-between;
+  margin-top: 1em;
 }
 
 #booking_start_date_1i {
