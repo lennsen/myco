@@ -2,11 +2,32 @@
 <div class="container mt-5">
 
 
-    <div class="profile-image">
-        <%= cl_image_tag @space.photo.key, :width=>500, :height=>400, crop: :fill, style:"border-radius: 20px" %>
+  <div class="space-top">
+    <%= cl_image_tag @space.photo.key, :width=>650, :height=>400, crop: :fill, style:"border-radius: 4px" %>
+
+
+    <% if @user != @space.user %>
+    <div class="col-6">
+      <div class="booking-form">
+        <p> <%= @space.price_per_month%> € per month</p>
+        <%= simple_form_for [@space, @booking] do |f| %>
+        <div class="input-dates">
+          <div class="input-start-date form-inline">
+            <%=   f.input :start_date, label: 'START COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }%>
+          </div>
+          <div class="input-end-date form-inline">
+            <%=   f.input :end_date, label: 'END COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
+          </div>
+        </div>
+        <div class="input-message">
+          <%=   f.input :message_to_host, label: 'MESSAGE TO HOST', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
+        </div>
+        <%=   f.submit 'Request Booking', class: "btn btn-flat" %>
+        <% end %>
+      </div>
     </div>
-
-
+    <% end %>
+  </div>
   <div style="margin-bottom: 50px">
     <h1><%= @space.title %></h1>
     <h5><%= @space.description %></h5>
@@ -24,20 +45,6 @@
     <% if policy(@space).destroy? %>
       <%= link_to "delete HUB", space_path(@space), method: :delete, data: {confirm: "Are you sure you want to delete?"}, class: "btn btn-outline-danger", style: "margin-right: 10px; border-radius: 50px" %>
     <% end %>
-
-
   </div>
-
-    <div class="col-6">
-        <div class="container mt-5 border p-3 rounded">
-          <%= simple_form_for [@space, @booking] do |f| %>
-          <%=   f.input :start_date  %>
-          <%=   f.input :end_date %>
-          <p> <%= @space.price_per_month%> € per month</p>
-          <%=   f.submit 'Book Now', class: "btn btn-warning", style: "border-radius: 50px" %>
-          <% end %>
-        </div>
-    </div>
-  
 
 </div>
