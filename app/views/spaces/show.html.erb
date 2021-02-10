@@ -1,42 +1,46 @@
 <%= render "shared/navbar" %>
 <div class="container mt-5">
-
-
-  <div class="space-top">
-    <%= cl_image_tag @space.photo.key, :width=>650, :height=>400, crop: :fill, style:"border-radius: 4px" %>
-
-
-    <% if @user != @space.user %>
-    <div class="col-6">
-      <div class="booking-form">
-        <p> <%= @space.price_per_month%> € per month</p>
-        <%= simple_form_for [@space, @booking] do |f| %>
-        <div class="input-dates">
-          <div class="input-start-date form-inline">
-            <%=   f.input :start_date, label: 'START COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }%>
-          </div>
-          <div class="input-end-date form-inline">
-            <%=   f.input :end_date, label: 'END COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
-          </div>
-        </div>
-        <div class="input-message">
-          <%=   f.input :message_to_host, label: 'MESSAGE TO HOST', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
-        </div>
-        <%=   f.submit 'Request Booking', class: "btn btn-flat" %>
-        <% end %>
-      </div>
+  <div class="space-show-header">
+    <div class="d-flex">
+      <h5><%= @space.title %></h5>
+      <p class="space-type-flag"><%= @space.space_type %></p>
     </div>
+    <p><%= @space.location %></p>
+  </div>
+  <div class="space-show-top">
+    <div>
+      <%= cl_image_tag @space.photo.key, :width=>750, :height=>450, crop: :fill, style:"border-radius: 4px" %>
+    </div>
+    <% if @user != @space.user %>
+      <div>
+        <div class="booking-form">
+          <div class="d-flex">
+            <h5> <%= @space.price_per_month%>€ </h5>
+            <p style="margin-top: 8px; margin-bottom: 1rem; margin-left: 10px;"> per month</p>
+          </div>
+          <%= simple_form_for [@space, @booking] do |f| %>
+          <div class="input-dates">
+            <div class="input-start-date form-inline">
+              <%=   f.input :start_date, label: 'START COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }%>
+            </div>
+            <div class="input-end-date form-inline">
+              <%=   f.input :end_date, label: 'END COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
+            </div>
+          </div>
+          <div class="input-message">
+            <%=   f.input :message_to_host, label: 'MESSAGE TO HOST', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
+          </div>
+          <%=   f.submit 'Request Booking', class: "btn btn-flat" %>
+          <% end %>
+        </div>
+      </div>
     <% end %>
   </div>
-  <div style="margin-bottom: 50px">
-    <h1><%= @space.title %></h1>
-    <h5><%= @space.description %></h5>
-    <h5><%= @space.space_type %></h5>
-    <h5><%= @space.price_per_month %></h5>
-    <h5><%= @space.location %></h5>
+  <div class="space-show-description">
+    <h5>About this coworking space</h5>
+    <p><%= @space.description %></p>
   </div>
 
-  <%= link_to 'Back', spaces_path(:location => params[:location]), class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
   <div>
     <% if policy(@space).edit? %>
       <%= link_to "change your offer", edit_space_path(@space), class: "btn btn-outline-dark", style: "margin-right: 10px; border-radius: 50px" %>
