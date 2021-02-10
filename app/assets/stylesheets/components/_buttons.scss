@@ -2,12 +2,11 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #5BB6BE;
+  background: $hubert;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #0da6b1;
+  background: $hubert-dark;
   color: white;
 }
-
