@@ -1,0 +1,113 @@
+.space-show-header {
+
+  p {
+    font-size: 0.8rem;
+    color: $lightgrey;
+  }
+}
+
+.space-type-flag {
+  font-size: 0.7rem!important;
+  margin-left: 21px;
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.space-show-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inline {
+
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.booking-form {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 20px;
+  width: 21rem;
+
+    h5 {
+      font-size: 1.75rem;
+      color: $hubert;
+    }
+}
+
+.input-dates {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 1em;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+}
+
+.input-message {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 2em;
+  margin-bottom: 1.4em;
+
+  .form-control {
+    height: 5em;
+    margin-bottom: 13px;
+  }
+}
+
+.input-start-date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.input-end-date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+#booking_start_date_1i {
+  width: auto;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+#booking_start_date_2i {
+  width: auto;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+#booking_start_date_3i {
+  width: auto;
+  font-size: 1rem;
+}
+
+#booking_end_date_1i {
+  width: auto;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+#booking_end_date_2i {
+  width: auto;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+#booking_end_date_3i {
+  width: auto;
+  font-size: 1rem;
+}
+
+.space-show-description {
+  margin-top: 2em;
+  width: auto;
+
+    h5 {
+      margin-bottom: 16px;
+    }
+}
