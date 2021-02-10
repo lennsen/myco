@@ -11,12 +11,13 @@
   border: 1px solid lightgray;
   border-radius: 4px;
   padding: 20px;
-  width: 28rem;
+  width: 20rem;
 }
 
 .input-dates {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 1em;
   font-size: 0.8rem;
   font-weight: 500;

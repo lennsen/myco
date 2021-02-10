@@ -12,10 +12,10 @@
         <p> <%= @space.price_per_month%> € per month</p>
         <%= simple_form_for [@space, @booking] do |f| %>
         <div class="input-dates">
-          <div class="input-start-date">
+          <div class="input-start-date form-inline">
             <%=   f.input :start_date, label: 'START COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }%>
           </div>
-          <div class="input-end-date">
+          <div class="input-end-date form-inline">
             <%=   f.input :end_date, label: 'END COWORKING', label_html: { class: "label" }, input_html: { class: "form-control" }  %>
           </div>
         </div>
