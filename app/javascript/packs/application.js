@@ -7,17 +7,20 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require ("bootstrap-datepicker-rails").start()
 
 // External imports
 import "bootstrap";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+
 // internal imports
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
-
+import { initDatepicker } from '../plugins/init_datepicker';
 
 document.addEventListener('turbolinks:load', () => {
 initAutocomplete();
 initMapbox();
+initDatepicker();
 });
