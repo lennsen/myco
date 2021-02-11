@@ -44,7 +44,7 @@ s1 = Space.create(
 
 s1.photo.attach(io: file, filename: 'office1.png', content_type: 'image/png')
 s1.save
-puts "#{Space.count} #{Space.last.title} created..."
+puts "#{Space.count}. #{Space.last.title} created..."
 
 file = URI.open('https://images.unsplash.com/photo-1585634917202-6f03b28fc6d0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 s2 = Space.create(
