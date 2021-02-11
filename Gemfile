@@ -32,6 +32,7 @@ gem 'geocoder'
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'jquery-rails'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.1.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
