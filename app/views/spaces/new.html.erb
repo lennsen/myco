@@ -2,20 +2,11 @@
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h3>Offer your Office to Fellow Co-Workers</h3>
-      <br>
-      <br>
-        <%= simple_form_for @space, remote: true do |f| %>
-          <%= f.input :title, wrapper: :field4  %>
-          <%= f.input :description, wrapper: :field8 %>
-          <%= f.input :space_type, as: :radio_buttons, collection: ['PRIVATE', 'COMMUNITY', 'CORPORATE', 'PROFESSIONAL'] %>
-          <%= f.input :price_per_month, wrapper: :field4 %>
-          <%= f.input :location, wrapper: :field4 %>
-          <%= f.input :photo, as: :file %>
-          <br>
-          <%= f.submit 'Create HUB', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
-          <%= link_to 'Back Home', root_path, class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
-        <% end %>
+      <h5>Hallo</h5>
+      <p>Wie geht's?</p>
+    </div>
+    <div class="col-6">
+      <%= render "form", space: @space %>
     </div>
   </div>
 </div>
