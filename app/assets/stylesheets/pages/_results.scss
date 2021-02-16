@@ -1,7 +1,4 @@
 .index-container {
-    // display: flex;
-    // justify-content: space-between;
-    // flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
@@ -12,7 +9,7 @@
       text-decoration: none;
       color: black;
     }
-  
+
     h5 {
       font-size: 1rem;
     }
@@ -21,4 +18,56 @@
     display: flex;
     // justify-content: space-between;
     // flex-wrap: wrap;
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .index-container {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .index-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .index-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
+
+/*Large devices (monitor, 1200px and up)*/
+@media (min-width: 1200px) {
+  .index-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
+
+/*Extra large device (monitor, 1560px and up)*/
+@media (min-width: 1560px) {
+  .index-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
 }
