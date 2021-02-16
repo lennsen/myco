@@ -1,46 +1,23 @@
 <%= render "shared/navbar-home" %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('./assets/banner.png');">
-  <div class="container container-box">
-    <div class="row">
-      <div class="column">
-        <div style="margin-bottom: 20px">
-          <h1>Find unique micro coworking places in your street.</h1>
-        </div>
-        <div>
-          <div style="margin-bottom: 20px">
-            <%= form_tag spaces_path, class: "search-container", method: :get do %>
-            <%= text_field_tag :location,
-            params[:location],
-            placeholder: "Where do you want to work?", class: "form-control search", autofocus: true
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('./assets/banner.png');">
+
+  <div class="row justify-content-center" style="margin-top: 120px">
+  <% unless params[:location].present? %>
+    <div class="search-bar col-12 col-lg-6">
+      <div>
+        <h5 class="search-header" style="font-weight: bold">Where do you want to work?</h5>
+        <%= form_tag spaces_path, class: "search-container", method: :get do %>
+           <%= text_field_tag :location,
+               params[:location],
+               placeholder: "", class: "form-control search", autofocus: true
             %>
-          </div>
-          <div style="margin-bottom: 20px">
-            <%= text_field_tag :start_date,
-            params[:start_date],
-            placeholder: "When do you want to start?", class: "form-control search", autofocus: true
-            %>
-          </div>
-          <div style="margin-bottom: 20px">
-            <%= text_field_tag :end_date,
-            params[:end_date],
-            placeholder: "When do you want to finish?", class: "form-control search", autofocus: true
-            %>
-          </div>
           <div class="input-group-append">
-            <button class="btn btn-flat" type="submit">Submit</button>
+            <button class="button-search" type="submit"><i class="fas fa-search search"></i></button>
           </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="checkboxes-home">
-          <p><%= check_box_tag :space_type, 'Private spaces' %> Private spaces</p>
-          <p><%= check_box_tag :space_type, 'Community spaces' %> Community spaces</p>
-          <p><%= check_box_tag :space_type, 'Corporate spaces' %> Corporate spaces</p>
-          <p><%= check_box_tag :space_type, 'Professional space' %> Professional spaces</p>
-          <% end %>
-        </div>
+         <% end %>
       </div>
     </div>
+  <% end %>
   </div>
 </div>
 
