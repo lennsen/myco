@@ -1,15 +1,20 @@
-<%= simple_form_for(space, html: { class: "form"}) do |f| %>
-  <%= f.input :title, input_html: { class: "form-control" }, label: false, placeholder: 'Name your coworking space' %>
-  <%= f.input :description, input_html: { class: "form-control " }, label: false, placeholder: 'Give a short description of your coworking space' %>
-  <%= f.input :space_type, input_html: { class: "form-control" }, label: false, placeholder: 'What kind of coworking space is it?' %>
-  <%= f.input :location, input_html: { class: "form-control" }, label: false, placeholder: 'Where is your coworking space located?' %>
+<div class="space-form">
+  <%= simple_form_for(@space, html: { class: "form"}) do |f| %>
+    <%= f.input :title, input_html: { class: "form-control form-space-title" }, label: false, placeholder: 'Name your coworking space' %>
+    <%= f.input :description, as: :text, input_html: { class: "form-control form-space-description" }, label: false, placeholder: 'Give a short description of your coworking space' %>
+    <%= f.input :space_type, collection: [["Private Space", "PRIVATE"], ["Community Space", "COMMUNITY"], ["Professional Space", "PROFESSIONAL"], ["Corporate Space", "CORPORATE"]], as: :select, input_html: { class: "form-control form-space-type"}, label: false, prompt: 'Choose your space type' %>
+    <%= f.input :location, input_html: { class: "form-control form-space-location" }, label: false, placeholder: 'Where is your coworking space located?' %>
+    <%= f.input :price_per_month, input_html: { class: "form-control form-space-price" }, label: false, placeholder: 'Price per month?' %>
 
-<div class="buttons-container">
-  <div height="40">
-    <%= f.input :photo, input_html: { class: "d-none" }, label_html: { class: 'btn-height btn btn-ghost'}, label: 'Upload a photo' %>
+  <div class="buttons-container">
+    <br>
+    <div height="40">
+      <%= f.input :photo, input_html: { class: 'photo-upload'}, label: 'Upload a photo:', label_html: { style: 'display: block'} %>
+    </div>
+    <br>
+    <div height="40" >
+      <%= f.submit 'Create HUB', class: "btn btn-flat", style: "width: 100%"%>
+    </div>
   </div>
-  <div height="40">
-    <%= f.submit 'Create HUB', class: "btn btn-flat"%>
-  </div>
+  <% end %>
 </div>
-<% end %>

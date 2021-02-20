@@ -1,0 +1,59 @@
+.space-form {
+  width: 90%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.buttons-container {
+  padding: 24px;
+  text-align: center;
+}
+
+.photo-upload {
+
+}
+
+.form-space-title {
+  padding: 25px 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-space-description {
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 25px 20px;
+}
+
+.form-space-type {
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 25px 16px;
+  height: 71px;
+  color: #6C757D;
+}
+
+.form-space-location {
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 25px 20px;
+}
+
+.form-space-price {
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 25px 20px;
+}
