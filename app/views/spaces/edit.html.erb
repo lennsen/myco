@@ -2,20 +2,11 @@
 <div class="container mt-5 mb-5">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h3>Change the details of your Space</h3>
-      <br>
-      <br>
-      <%= simple_form_for(@space) do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :space_type, as: :radio_buttons, collection: ['Private Space', 'Community Space', 'Corporate Space', 'Professionial Space'] %>
-        <%= f.input :price_per_month %>
-        <%= f.input :location %>
-        <%= f.input :photo, as: :file %>
-        <br>
-        <%= f.submit 'Save Changes', class: 'create btn btn-warning', style: "margin-right: 10px; border-radius: 50px" %>
-        <%= link_to 'Back', space_path(@space), class: 'btn btn-outline-dark', style: "margin-right: 10px; border-radius: 50px" %>
-      <% end %>
+      <h5>Change the details of your HUB</h5>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="col-6">
+      <%= render "form", space: @space %>
     </div>
   </div>
 </div>
