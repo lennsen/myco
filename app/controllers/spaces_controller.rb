@@ -65,6 +65,12 @@ class SpacesController < ApplicationController
     redirect_to root_path
   end
 
+  def myhubs
+    @user = current_user
+    @myhubs = @user.spaces
+    authorize @myhubs
+  end
+
   private
 
   def set_params
