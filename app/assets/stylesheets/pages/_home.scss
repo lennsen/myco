@@ -26,12 +26,13 @@
 }
 
 .home-container-1 {
-  padding: 3em 5em;
+  padding: 5em 5em;
 
   h2 {
     font-size: 1.5rem;
     color: $hubert;
   }
+
 }
 
 .checkboxes-home {
@@ -44,27 +45,33 @@
   }
 
 .home-container-2 {
-  color: white;
   background: black;
-  padding: 3em 5em;
+  padding: 5em 5em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
 
   h2 {
     font-size: 1.5rem;
     color: $hubert;
+  }
+
+  p {
+    color: white;
+    line-height: 1.5;
   }
 }
 
 .home-container-3 {
-  padding: 3em 5em;
+  padding: 5em 5em;
 
   h2 {
     font-size: 1.5rem;
     color: $hubert;
   }
+
 }
 
 .home-container-4 {
-  padding: 3em 5em;
+  padding: 5em 5em;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -72,19 +79,25 @@
     font-size: 1.5rem;
     color: $hubert;
   }
+
 }
 
 .home-container-5 {
-  padding: 3em 5em;
+  padding: 5em 5em;
 
   h2 {
     font-size: 1.5rem;
     color: $hubert;
   }
+
+  p {
+    margin-bottom: 2em;
+  }
+
 }
 
 .home-container-6 {
-  padding: 2em 5em;
+  padding: 5em 5em;
   background-color: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -92,6 +105,7 @@
     font-size: 1.5rem;
     color: $hubert;
   }
+
 }
 
 .home-spaces {

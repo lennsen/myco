@@ -13,6 +13,7 @@
   border-radius: 4px;
   border: 1px solid rgba(38, 38, 38, 0.125);
   max-width: 20em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .card-title {
@@ -148,7 +149,7 @@
   justify-content: space-between;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .hostings-card-left {
@@ -166,6 +167,11 @@
   display: flex;
 }
 
+.hostings-buttons {
+  display: grid;
+  grid-gap: 8px;
+}
+
 // MYHUBS
 
 .hub-card {
@@ -181,11 +187,9 @@
 }
 
 .hub-card img {
-  width: 10em;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  width: 15em;
+  border-radius: 4px;
 }
-
 
 .hub-card-body {
   display: flex;
@@ -193,6 +197,13 @@
   flex: 1 1 auto;
   min-height: 1px;
   margin-bottom: 1em;
+}
+
+.hub-card-text {
+    color: $darkgrey;
+    p {
+      margin-top: 0.4em;
+    }
 }
 
 .hub-card-left {
@@ -203,9 +214,16 @@
 }
 
 .hub-card-info {
-  margin-left: 20px;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 .hub-card-title {
   display: flex;
+}
+
+.hub-card-options {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
 }

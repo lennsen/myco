@@ -68,3 +68,28 @@
   color: $white;
   background-color: $darkgrey
 }
+
+.dropdown-menu-right {
+    right: -15px;
+    left: auto;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5em 0;
+    margin: 1.2em 0 0;
+    font-size: 1rem;
+    color: #0E0000;
+    text-align: left;
+    list-style: none;
+    background-color: #FFFFFF;
+    background-clip: padding-box;
+    border: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 0;
+}
