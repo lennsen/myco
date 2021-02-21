@@ -10,3 +10,16 @@
   background: $hubert-dark;
   color: white;
 }
+
+.btn-flat-second {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $hubert-red;
+  transition: background 0.3s ease;
+}
+
+.btn-flat-second:hover {
+  background: $hubert-reddish;
+  color: white;
+}

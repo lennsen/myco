@@ -64,40 +64,8 @@
   background-color: $light-gray;
 }
 
-.hostings-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: inherit;
-  background-clip: border-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 2px;
-}
 
-.hostings-card-body {
-  display: flex;
-  justify-content: space-between;
-  flex: 1 1 auto;
-  min-height: 1px;
-  padding: 1.25rem;
-}
-
-.hostings-card-left {
-  display: flex;
-  flex: 1 1 auto;
-  min-height: 1px;
-  padding: 1.25rem;
-}
-
-.hostings-card-info {
-  margin-left: 20px;
-}
-
-.hostings-card-title {
-  display: flex;
-}
+// CARDS
 
 .cards {
   display: grid;
@@ -159,4 +127,85 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+// HOSTINGS
+
+.hostings-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: inherit;
+  background-clip: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+}
+
+.hostings-card-body {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.hostings-card-left {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.hostings-card-info {
+  margin-left: 20px;
+}
+
+.hostings-card-title {
+  display: flex;
+}
+
+// MYHUBS
+
+.hub-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: inherit;
+  background-clip: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 2px;
+}
+
+.hub-card img {
+  width: 10em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+
+.hub-card-body {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-height: 1px;
+  margin-bottom: 1em;
+}
+
+.hub-card-left {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 1px;
+  margin-top: 1em;
+}
+
+.hub-card-info {
+  margin-left: 20px;
+}
+
+.hub-card-title {
+  display: flex;
 }

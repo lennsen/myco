@@ -20,9 +20,18 @@
   flex: 1;
 }
 
+.home-contents {
+  position: relative;
+  top: -60px;
+}
+
 .home-container-1 {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 3em 5em;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
+  }
 }
 
 .checkboxes-home {
@@ -34,21 +43,72 @@
     width: max-content;
   }
 
-  .home-container-2 {
-    color: white;
-    background: black;
-    margin: 5rem 0 0;
-    padding: 5rem;
-  }
+.home-container-2 {
+  color: white;
+  background: black;
+  padding: 3em 5em;
 
-  .home-container-3 {
-    padding: 5rem 0 0 5rem;
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
   }
+}
 
-  .private-spaces {
-    display: flex;
-    justify-content: flex-start;
+.home-container-3 {
+  padding: 3em 5em;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
   }
+}
+
+.home-container-4 {
+  padding: 3em 5em;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
+  }
+}
+
+.home-container-5 {
+  padding: 3em 5em;
+
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
+  }
+}
+
+.home-container-6 {
+  padding: 2em 5em;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  h2 {
+    font-size: 1.5rem;
+    color: $hubert;
+  }
+}
+
+.home-spaces {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 16px;
+      flex-grow: 1;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+}
 
   // SEARCH BAR
 

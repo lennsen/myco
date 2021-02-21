@@ -1,0 +1,36 @@
+<%= render 'shared/navbar' %>
+<br><br>
+<div class="container mt-5 mb-5">
+  <% if @myhubs.empty?%>
+    <div class="container mt-5 notification">
+      <p>Nothing to display here. You are currently not offering a space for rent or nobody has booked it.</p>
+      <a class="btn btn-ghost" href="/spaces/new">Become a HUB</a>
+    </div>
+  <% else %>
+  <div class="container">
+    <h2>My HUBS</h2>
+    <p>Check your current listings, edit the details of a HUB or deactivate your listings.</p>
+  </div>
+  <div class="container">
+    <% @myhubs.each do |space| %>
+    <div class="hub-card">
+      <div class="hub-card-body">
+        <div class="hub-card-left">
+          <div class="hub-card">
+            <% if space.photo.attached? %>
+              <%= cl_image_tag space.photo.key, crop: :fill, class: "card-img-top" %>
+            <% end %>
+          </div>
+          <div class="hub-card-info">
+            <div class="hub-card-title">
+              <h5 class="card-text" style="color: #53B2AC"><%= space.title %></h5>
+            </div>
+            <p class="card-text"><%= space.description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
