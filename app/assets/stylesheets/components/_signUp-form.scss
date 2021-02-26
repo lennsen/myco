@@ -8,6 +8,19 @@
     color: $hubert;
 }
 
+.a {
+  text-decoration: none;
+  color: lightgrey;
+
+  a:hover {
+    color: $hubert;
+  }
+
+}
+
+
+
+
 .signUp-form {
     flex-basis: content;
     margin-top: 24px;
