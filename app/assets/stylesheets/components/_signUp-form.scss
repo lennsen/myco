@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.h2 {
+    padding-top: 8px;
+    color: $hubert;
+}
+
+.signUp-form {
+    flex-basis: content;
+    margin-top: 24px;
+    align-self: center;
+    height: 80%;
+    width: 60%;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .buttons-container {
+    padding: 24px;
+    text-align: center;
+  }
+
+  .mail-field {
+    padding: 8px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 0;
+    border-bottom: dotted 1px $lightgrey;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+  .name-field {
+    padding: 8px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 0;
+    border-bottom: dotted 1px $lightgrey;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
