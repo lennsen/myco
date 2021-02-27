@@ -1,0 +1,4 @@
+2021-02-25 20:57:13.035 CET [1517] FATAL:  database files are incompatible with server
+2021-02-25 20:57:13.035 CET [1517] DETAIL:  The data directory was initialized by PostgreSQL version 12, which is not compatible with this version 13.2.
+2021-02-25 20:57:19.948 CET [1543] FATAL:  database files are incompatible with server
+2021-02-25 20:57:19.948 CET [1543] DETAIL:  The data directory was initialized by PostgreSQL version 12, which is not compatible with this version 13.2.
