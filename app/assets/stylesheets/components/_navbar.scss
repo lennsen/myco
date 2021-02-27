@@ -35,6 +35,26 @@
     color: rgb(103, 204, 129);
 }
 
+.nav-login-home {
+  color: $white;
+  padding: 0.5rem;
+}
+
+.nav-login-home:hover {
+  color: $hubert;
+  text-decoration: none;
+}
+
+.nav-login {
+  color: $jetblack;
+  padding: 0.5rem;
+}
+
+.nav-login:hover {
+  color: $hubert;
+  text-decoration: none;
+}
+
 .btn-ghost-home {
   color: $white;
   border: 1px solid $white;

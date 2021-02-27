@@ -2,41 +2,36 @@
 
 <div class="signUp-container">
   <div class="signUp-form">
-  <h2 class="h2">Sign up</h2>
+  <h2>Sign up to <span style="color: #53B2AC">HUB</span>ert</h2>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "form"}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="mail-field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", label: false, placeholder: 'E-mail' %>
       </div>
 
       <div class="name-field">
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name, autofocus: true, autocomplete: "First Name" %>
+        <%= f.text_field :first_name, autofocus: true, autocomplete: "First Name", label: false, placeholder: 'First name' %>
       </div>
 
       <div class="name-field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true, autocomplete: "Last Name" %>
+        <%= f.text_field :last_name, autofocus: true, label: false, placeholder: 'Last name' %>
       </div>
 
       <div class="name-field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "new-password", label: false, placeholder: 'Password' %>
       </div>
 
       <div class="name-field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", label: false, placeholder: 'Password confirmation' %>
       </div>
 
       <div class="buttons-container">
         <%= f.submit "Sign up", class: "btn btn-flat", style: "width: 100%" %>
       </div>
     <% end %>
+    <div class="login-links">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
 </div>

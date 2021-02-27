@@ -1,0 +1,21 @@
+<div class="space-form">
+  <%= simple_form_for(@space, html: { class: "form"}) do |f| %>
+    <%= f.input :title, input_html: { class: "form-control form-space-title" }, label: false, placeholder: 'Change the name your coworking space' %>
+    <%= f.input :description, as: :text, input_html: { class: "form-control form-space-description" }, label: false, placeholder: 'Change the description of your coworking space' %>
+    <%= f.input :space_type, collection: [["Private Space", "PRIVATE"], ["Community Space", "COMMUNITY"], ["Professional Space", "PROFESSIONAL"], ["Corporate Space", "CORPORATE"]], as: :select, input_html: { class: "form-control form-space-type"}, label: false, prompt: 'Change the space type' %>
+    <%= f.input :location, input_html: { class: "form-control form-space-location" }, label: false, placeholder: 'Change the location' %>
+    <%= f.input :price_per_month, input_html: { class: "form-control form-space-price" }, label: false, placeholder: 'Adjust the price' %>
+
+  <div class="buttons-container">
+    <br>
+    <div height="40">
+      <%= f.input :photo, input_html: { class: 'photo-upload'}, label: 'Upload a new photo:', label_html: { style: 'display: block'} %>
+    </div>
+    <br>
+    <div height="40" style="margin-bottom: 1em" >
+      <%= f.submit 'Update HUB', class: "btn btn-flat", style: "width: 100%"%>
+    </div>
+    <%= link_to 'Cancel', myhubs_path, class: "space-edit-cancel" %>
+  </div>
+  <% end %>
+</div>
