@@ -53,7 +53,8 @@
   font-size: 14px;
   font-style: italic;
   color: $green;
-  background-color: $light-gray;
+  background-color: $white;
+  margin-left: 1rem;
 }
 
 .status-red {
@@ -62,7 +63,18 @@
   font-size: 14px;
   font-style: italic;
   color: $red;
-  background-color: $light-gray;
+  background-color: $white;
+  margin-left: 1rem;
+}
+
+.status-yellow {
+  display: table;
+  padding: 3px 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: $yellow;
+  background-color: $white;
+  margin-left: 1rem;
 }
 
 

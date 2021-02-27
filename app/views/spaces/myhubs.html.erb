@@ -1,14 +1,14 @@
 <%= render 'shared/navbar' %>
 <br><br>
-<div class="container mt-5 mb-5">
+<div class="container mb-5">
   <% if @myhubs.empty?%>
-    <div class="container mt-5 notification">
-      <p>Nothing to display here. You are currently not offering a space for rent or nobody has booked it.</p>
+    <div class="container notification" style="font-style: italic">
+      <p>You are currently not offering a space for rent.</p>
       <a class="btn btn-ghost" href="/spaces/new">Become a HUB</a>
     </div>
   <% else %>
-  <div class="container">
-    <h2>Review your HUBS</h2>
+  <div class="container mb-5" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125)">
+    <h2>Review your HUBs</h2>
     <p>Check your current listings, edit details or deactivate a listing.</p>
   </div>
   <div class="container">
