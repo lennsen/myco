@@ -1,16 +1,16 @@
 <%= render 'shared/navbar' %>
 <br><br>
 <div class="container mb-5">
+  <div class="container mb-5" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125)">
+    <h2>Review your HUBs</h2>
+    <p>Check your current listings, edit details or deactivate a listing.</p>
+  </div>
   <% if @myhubs.empty?%>
     <div class="container notification" style="font-style: italic">
       <p>You are currently not offering a space for rent.</p>
       <a class="btn btn-ghost" href="/spaces/new">Become a HUB</a>
     </div>
   <% else %>
-  <div class="container mb-5" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125)">
-    <h2>Review your HUBs</h2>
-    <p>Check your current listings, edit details or deactivate a listing.</p>
-  </div>
   <div class="container">
     <% @myhubs.each do |space| %>
     <div class="hub-card">
