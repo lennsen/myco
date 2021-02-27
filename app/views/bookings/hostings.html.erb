@@ -1,36 +1,38 @@
 <%= render 'shared/navbar' %>
 <br><br>
-<div class="container mt-5 mb-5">
+<div class="container mb-5">
+  <div class="container mb-5" style="border-bottom: 1px solid rgba(0, 0, 0, 0.125)">
+    <h2>Review your hostings</h2>
+    <p>Keep track of inquiries for your HUBs and accept or decline booking request.</p>
+  </div>
   <% if @hostings.empty?%>
-    <div class="container mt-5 notification">
-      <p>Nothing to display here. You are currently not offering a space for rent or nobody has booked it.</p>
-      <a class="btn btn-ghost" href="/spaces/new">Become a HUB</a>
+    <div class="container mt-5 notification" style="font-style: italic">
+      <p>You are currently not offering a space for rent or nobody has booked it yet.</p>
     </div>
   <% else %>
-  <div class="container">
-    <h2>My Hostings</h2>
-    <p>Keep track of your spaces and accept or decline a booking.</p>
-  </div>
   <div class="container">
     <% @hostings.each do |hosting| %>
     <div class="hostings-card">
       <div class="hostings-card-body">
         <div class="hostings-card-left">
           <div>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar" %>
+            <%= image_tag "avatar-placeholder.png", class: "avatar" %>
           </div>
           <div class="hostings-card-info">
             <div class="hostings-card-title">
-              <h5 class="card-text">Inquiry from <span style="color: #53B2AC"><%= hosting.user.first_name %></span></h5>
+              <h5 class="card-text">Inquiry from <span style="color: #53B2AC"><%= hosting.user.first_name %> <%= hosting.user.last_name %></span></h5>
               <% if hosting.status == "Accepted"%>
                 <p class="card-text status-green" style="border-radius: 50px">Accepted</p>
               <% elsif hosting.status == "Declined"%>
                 <p class="card-text status-red" style="border-radius: 50px">Declined</p>
               <% else %>
-                <p class="card-text status-red" style="border-radius: 50px">Pending</p>
+                <p class="card-text status-yellow" style="border-radius: 50px">Pending</p>
               <% end %>
             </div>
-            <p class="card-text"><%= hosting.start_date %> – <%= hosting.end_date %> <%= hosting.space.title %></p>
+            <p class="card-text" style="font-style: italic">"<%= hosting.message_to_host %>"</p>
+            <p class="card-text"><span style="color: #53B2AC">From:</span> <%= hosting.start_date %></p>
+            <p class="card-text"><span style="color: #53B2AC">To:</span> <%= hosting.end_date %></p>
+            <p class="card-text"><span style="color: #53B2AC">HUB:</span> <%= hosting.space.title %></p>
           </div>
         </div>
         <div class="hostings-buttons">

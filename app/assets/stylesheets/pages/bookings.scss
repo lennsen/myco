@@ -1,0 +1,23 @@
+.status-accepted {
+  color: $white;
+  background: $green;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-style: italic;
+}
+
+.status-declined {
+  color: $white;
+  background: $red;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-style: italic;
+}
+
+.status-pending {
+  color: $darkgrey;
+  background: $yellow;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-style: italic;
+}
