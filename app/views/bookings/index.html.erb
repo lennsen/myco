@@ -22,7 +22,7 @@
                   <% end %>
                 <div class="hub-card-info">
                   <div class="hub-card-title">
-                    <h5 class="hub-card-text" style="color: #53B2AC"><%= booking.space.title %></h5>
+                    <h5 class="hub-card-text" style="color: #53B2AC"><%= link_to booking.space.title, space_path(booking.space) %></h5>
                     <p class="space-type-flag"><%= booking.space.space_type %></p>
                   </div>
                   <% if booking.status == "Accepted"%>

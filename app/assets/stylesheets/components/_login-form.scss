@@ -3,4 +3,40 @@
     background: white;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
   }
+
+.remember-field {
+  padding: 16px 28px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 0;
+  border-bottom: dotted 1px $lightgrey;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+    label {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #757575;
+      margin-left: 4px;
+    }
+}
+
+.login-links {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto 16px auto;
+  width: 100%;
+
+    a {
+      text-decoration: none;
+      color: lightgrey;
+      padding: 0 16px;
+    }
+
+    a:hover {
+      color: $hubert;
+    }
+
+}
