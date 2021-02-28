@@ -61,7 +61,7 @@ class SpacesController < ApplicationController
     @space = Space.find(params[:id])
     @space.user = current_user
     authorize @space
-    @space.delete
+    @space.destroy
     redirect_to root_path
   end
 
